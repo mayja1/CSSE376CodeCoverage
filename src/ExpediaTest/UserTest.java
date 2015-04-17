@@ -99,6 +99,15 @@ public class UserTest
 		target.bookWithDoubleMiles(new Booking[]{flight});
 		Assert.assertEquals(5000, target.bonusFrequentFlierMiles, 0.01);
 	}
+	
+	@Test
+	public void TestDoubleMilesLessThan5000()
+	{
+		Car car = new Car(5);
+		Flight flight = new Flight(StartDate, EndDate, 4000);
+		target.bookWithDoubleMiles(new Booking[]{flight});
+		Assert.assertEquals(4000, target.bonusFrequentFlierMiles, 0.01);
+	}
 
 	@Test
 	public void TestThatDiscountInitializes()
