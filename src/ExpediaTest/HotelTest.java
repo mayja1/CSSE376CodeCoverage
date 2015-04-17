@@ -49,6 +49,12 @@ public class HotelTest
 		new Hotel(-5);
 	}
 
+	@Test
+	public void TestThatHotelInitializes()
+	{
+		Hotel hotel = new Hotel(1);
+		Assert.assertNotNull(hotel);
+	}
 	
 	@Test
     public void TestThatHotelDoesGetRoomOccupantFromTheDatabase()
